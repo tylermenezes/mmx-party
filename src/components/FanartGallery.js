@@ -14,7 +14,8 @@ const transitionStyles = {
 export default function FanartGallery({ duration, ...rest }) {
   const { data } = useSwr(
     '/api/fanart',
-    (url) => fetch(url).then((res) => res.json())
+    (url) => fetch(url).then((res) => res.json()),
+    { revalidateOnFocus: false, refreshInterval: 60000 },
   );
 
   const [image, nextImage] = useReducer(
@@ -54,6 +55,7 @@ export default function FanartGallery({ duration, ...rest }) {
                 backgroundRepeat="no-repeat"
                 width="100%"
                 height="100%"
+                backgroundColor="white"
               >
                 <Box
                   position="absolute"

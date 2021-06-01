@@ -1,4 +1,4 @@
-import { Box } from '@chakra-ui/react';
+import { Box, Image } from '@chakra-ui/react';
 export default function SidebarPromo() {
   return (
     <Box
@@ -9,8 +9,9 @@ export default function SidebarPromo() {
       left={0}
       color="white"
       fontSize="5xl"
+      textAlign="center"
     >
-      CAD/Wiki promo artwork here.
+      <Image src="/wikihelp.png" w="100%" />
     </Box>
   )
 }

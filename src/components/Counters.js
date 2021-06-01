@@ -1,7 +1,7 @@
 import { useReducer, useMemo } from 'react';
 import useSwr from 'swr';
 import CountUp from 'react-countup';
-import { Box } from '@chakra-ui/react';
+import { Box, Image } from '@chakra-ui/react';
 
 export default function Counters({ ...rest }) {
   const [lastData, setLastData] = useReducer((prev, [k, v]) => ({ ...prev, [k]: v}), { washers: 0, wilsons: 0, marbles: 0 });
@@ -12,16 +12,19 @@ export default function Counters({ ...rest }) {
   );
 
   return useMemo(() => (
-    <Box position="absolute" top="1vh" left="1vw" right="1vw" height="6vh" bg="blue.700" color="white" fontSize="3xl" {...rest}>
+    <Box position="absolute" top="1vh" left="1vw" right="1vw" pt="0.5vh" height="4vh" color="white" fontSize="4xl" {...rest}>
       <Box position="relative">
         <Box position="absolute" left={0}>
-          Washers: {data?.washers ? <CountUp start={lastData.washers} end={data.washers} onEnd={() => setLastData(['washers', data.washers])} /> : '???'}
+          <Image h="4vh" mr={4} d="inline-block" src="/washers.png" />
+          {data?.washers ? <CountUp start={lastData.washers} end={data.washers} onEnd={() => setLastData(['washers', data.washers])} /> : '???'}
         </Box>
         <Box position="absolute" left="33.3vw">
-          Wilsons: {data?.washers ? <CountUp start={lastData.wilsons} end={data.wilsons} onEnd={() => setLastData(['wilsons', data.wilsons])} /> : '???'}
+          <Image h="4vh" mr={4} d="inline-block" src="/wilsons.png" />
+          {data?.washers ? <CountUp start={lastData.wilsons} end={data.wilsons} onEnd={() => setLastData(['wilsons', data.wilsons])} /> : '???'}
         </Box>
         <Box position="absolute" left="66.6vw">
-          Marbles: {data?.washers ? <CountUp start={lastData.marbles} end={data.marbles} onEnd={() => setLastData(['marbles', data.marbles])} /> : '???'}
+          <Image h="4vh" mr={4} d="inline-block" src="/floormarbles.png" />
+          {data?.washers ? <CountUp start={lastData.marbles} end={data.marbles} onEnd={() => setLastData(['marbles', data.marbles])} /> : '???'}
         </Box>
       </Box>
     </Box>
