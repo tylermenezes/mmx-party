@@ -15,15 +15,15 @@ export default function Counters({ ...rest }) {
     <Box position="absolute" top="1vh" left="1vw" right="1vw" pt="0.5vh" height="4vh" color="white" fontSize="4xl" {...rest}>
       <Box position="relative">
         <Box position="absolute" left={0}>
-          <Image h="4vh" mr={4} d="inline-block" src="/washers.png" />
+          <Image h="1em" mr={4} d="inline-block" src="/washers.png" />
           {data?.washers ? <CountUp start={lastData.washers} end={data.washers} onEnd={() => setLastData(['washers', data.washers])} /> : '???'}
         </Box>
         <Box position="absolute" left="33.3vw">
-          <Image h="4vh" mr={4} d="inline-block" src="/wilsons.png" />
+          <Image h="1em" mr={4} d="inline-block" src="/wilsons.png" />
           {data?.washers ? <CountUp start={lastData.wilsons} end={data.wilsons} onEnd={() => setLastData(['wilsons', data.wilsons])} /> : '???'}
         </Box>
         <Box position="absolute" left="66.6vw">
-          <Image h="4vh" mr={4} d="inline-block" src="/floormarbles.png" />
+          <Image h="1em" mr={4} d="inline-block" src="/floormarbles.png" />
           {data?.washers ? <CountUp start={lastData.marbles} end={data.marbles} onEnd={() => setLastData(['marbles', data.marbles])} /> : '???'}
         </Box>
       </Box>

@@ -45,29 +45,28 @@ export default function FanartGallery({ duration, ...rest }) {
               height="100%"
               width="100%"
               transition="opacity 1s ease-in-out"
+              backgroundColor="black"
               {...transitionStyles[state]}
             >
               <Box
                 position="relative"
                 backgroundImage={`url(${image.images.preview})`}
-                backgroundSize="cover"
+                backgroundSize="contain"
                 backgroundPosition="50% 50%"
                 backgroundRepeat="no-repeat"
                 width="100%"
                 height="100%"
-                backgroundColor="white"
               >
                 <Box
                   position="absolute"
-                  bottom={0}
-                  right={0}
+                  bottom="calc(-2.1em + 1px)"
+                  right="-4px"
                   fontSize="2vh"
-                  backgroundColor="black"
                   color="white"
                   p={1}
                   textTransform="uppercase"
                 >
-                  {image?.credit}
+                  By {image?.credit}
                 </Box>
               </Box>
             </Box>

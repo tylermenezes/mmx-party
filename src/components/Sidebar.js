@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Box } from '@chakra-ui/react';
+import Logo from './Logo';
 import ObsNinja from './ObsNinja';
 import FanartGallery from './FanartGallery';
 import SidebarPromo from './SidebarPromo';
@@ -27,7 +28,8 @@ export default function Sidebar({ ...rest }) {
   }, [typeof window, setDisplayed, displayed]);
 
   return (
-    <Box position="absolute" top="22vh" left="77vw" right="2vw" bottom="2vh" {...rest}>
+    <Box position="absolute" top="7vh" left="77vw" right="2vw" bottom="2vh" {...rest}>
+      <Logo mb="3vh" />
       <Box position="relative">
         <Box
           transition="opacity 1s ease-in-out"
@@ -37,10 +39,10 @@ export default function Sidebar({ ...rest }) {
           top={0}
           height="40vh"
         >
-          <Box fontSize="4xl" color="white">Live CAD</Box>
+          <Box fontSize="4xl" color="white">CAD MODEL</Box>
           <Box
             borderWidth={4}
-            borderColor="rgba(255, 255, 255, 0.8)"
+            borderColor="rgba(255, 255, 255, 0.7)"
           >
             <Box bg="black" height="40vh">
               <ObsNinja
@@ -60,10 +62,10 @@ export default function Sidebar({ ...rest }) {
           position="absolute"
           top={0}
         >
-          <Box fontSize="4xl" color="white">Fan Art</Box>
+          <Box fontSize="4xl" color="white">FAN ART</Box>
           <Box
             borderWidth={4}
-            borderColor="rgba(255, 255, 255, 0.8)"
+            borderColor="rgba(255, 255, 255, 0.7)"
           >
             <FanartGallery height="30vh" bg="white" duration={5000} />
           </Box>
