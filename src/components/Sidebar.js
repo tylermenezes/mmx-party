@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
 import { Box } from '@chakra-ui/react';
 import Logo from './Logo';
-import ObsNinja from './ObsNinja';
 import FanartGallery from './FanartGallery';
 import SidebarPromo from './SidebarPromo';
+import CadStream from './CadStream';
 
 export default function Sidebar({ ...rest }) {
   const [displayed, setDisplayed] = useState(null);
@@ -45,8 +45,7 @@ export default function Sidebar({ ...rest }) {
             borderColor="rgba(255, 255, 255, 0.7)"
           >
             <Box bg="black" height="40vh">
-              <ObsNinja
-                streamId="RuyZpKN"
+              <CadStream
                 onStreamStarted={() => setDisplayed('cad')}
                 onStreamStopped={() => setDisplayed('promo')}
                 height="40vh"
