@@ -1,4 +1,4 @@
-import { Box, Image } from '@chakra-ui/react';
+import { Box, Image, Text } from '@chakra-ui/react';
 export default function SidebarPromo() {
   return (
     <Box
@@ -8,10 +8,12 @@ export default function SidebarPromo() {
       right={0}
       left={0}
       color="white"
-      fontSize="5xl"
+      fontSize="xl"
       textAlign="center"
     >
-      <Image src="/wikihelp.png" w="100%" />
+      <Text fontSize="3xl" lineHeight={2}>join the party @</Text>
+      <Text fontSize="4xl">discord.gg/wintergatan</Text>
+      <Image mt={16} src="/machine.png" w="100%" />
     </Box>
   )
 }
