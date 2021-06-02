@@ -10,7 +10,7 @@ export default function CadStream({ ...rest }) {
 
   return (
     <ObsNinja
-      streamId={data?.cadTeamId}
+      streamId={data?.cadTeamId || 'RuyZpKN'}
       {...rest}
     />
   );
