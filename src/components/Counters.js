@@ -27,13 +27,13 @@ export default function Counters({ ...rest }) {
       <Box position="absolute" bottom="5vh" left="1vw" right="1vw" pt="0.5vh" height="4vh" fontSize="5vh" {...rest}>
         <Box position="relative">
           <Box position="absolute" left="15vw" width="13vw" textAlign="center">
-            {data?.washers ? <CountUp start={lastData.washers} end={data.washers} onEnd={() => setLastData(['washers', data.washers])} /> : '???'}
+            {data?.washers ? <CountUp start={lastData.washers} end={data.washers} onEnd={() => setLastData(['washers', data.washers])} /> : data?.washers ?? '???'}
           </Box>
           <Box position="absolute" marginTop="-0.5vh" left="45vw" width="10vw" textAlign="center">
-            {data?.washers ? <CountUp start={lastData.wilsons} end={data.wilsons} onEnd={() => setLastData(['wilsons', data.wilsons])} /> : '???'}
+            {data?.washers ? <CountUp start={lastData.wilsons} end={data.wilsons} onEnd={() => setLastData(['wilsons', data.wilsons])} /> : data?.wilsons ?? '???'}
           </Box>
           <Box position="absolute" left="81vw" width="11vw" textAlign="center">
-            {data?.washers ? <CountUp start={lastData.marbles} end={data.marbles} onEnd={() => setLastData(['marbles', data.marbles])} /> : '???'}
+            {data?.washers ? <CountUp start={lastData.marbles} end={data.marbles} onEnd={() => setLastData(['marbles', data.marbles])} /> : data?.washers ?? '???'}
           </Box>
         </Box>
       </Box>
