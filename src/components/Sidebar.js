@@ -3,7 +3,7 @@ import { Box } from '@chakra-ui/react';
 import Logo from './Logo';
 import FanartGallery from './FanartGallery';
 import SidebarPromo from './SidebarPromo';
-import CadStream from './CadStream';
+import DynamicStream from './DynamicStream';
 
 export default function Sidebar({ ...rest }) {
   const [displayed, setDisplayed] = useState(null);
@@ -45,7 +45,8 @@ export default function Sidebar({ ...rest }) {
             borderColor="rgba(255, 255, 255, 0.7)"
           >
             <Box bg="black" height="40vh">
-              <CadStream
+              <DynamicStream
+                of="cad"
                 onStreamStarted={() => setDisplayed('cad')}
                 onStreamStopped={() => setDisplayed('promo')}
                 height="40vh"

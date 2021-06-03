@@ -9,7 +9,7 @@ function encodeUriAttributes(obj) {
     .join('&');
 }
 
-export default function ObsNinja({ streamId, streamAttributes, onStreamStarted, onStreamStopped, ...rest }) {
+export default function ObsNinja({ streamId, roomId, roomPassword, streamAttributes, onStreamStarted, onStreamStopped, ...rest }) {
   const [streamStarted, setStreamStarted] = useState(false);
   const ref = useRef();
   useEffect(() => {
@@ -42,7 +42,18 @@ export default function ObsNinja({ streamId, streamAttributes, onStreamStarted, 
   return useMemo(() => (
     <Box
       as="iframe"
-      src={`https://obs.ninja/?view=${streamId}&${encodeUriAttributes({ cleanoutput: true, transparent: true, ...streamAttributes })}`}
+      src={`https://obs.ninja/?${encodeUriAttributes({
+        cleanoutput: true,
+        transparent: true,
+        ...(roomId ? {
+          scene: true,
+          room: roomId,
+          password: roomPassword || false,
+        } : {
+          view: streamId
+        }),
+        ...streamAttributes
+      })}`}
       ref={ref}
       width="100%"
       height="100%"
@@ -50,5 +61,5 @@ export default function ObsNinja({ streamId, streamAttributes, onStreamStarted, 
       allow="autoplay;camera;microphone"
       {...rest}
     />
-  ), [ streamId, streamAttributes]);
+  ), [ streamId, roomId, roomPassword, streamAttributes]);
 }

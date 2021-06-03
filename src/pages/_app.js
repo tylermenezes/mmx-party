@@ -11,6 +11,7 @@ export default function App({ Component, pageProps }) {
           font-weight: normal;
           font-style: normal;
         }
+        body, html, #__next { width: 100%; height: 100%; background-color: rgba(0,0,0,0); }
         body { font-family: martinhand; }
         * { image-rendering: optimizequality; image-rendering: high-quality; }
       `}</style>
