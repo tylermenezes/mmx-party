@@ -12,19 +12,29 @@ export default function Counters({ ...rest }) {
   );
 
   return useMemo(() => (
-    <Box position="absolute" top="1vh" left="1vw" right="1vw" pt="0.5vh" height="4vh" color="white" fontSize="4xl" {...rest}>
-      <Box position="relative">
-        <Box position="absolute" left={0}>
-          <Image h="1em" mr={4} d="inline-block" src="/washers.png" />
-          {data?.washers ? <CountUp start={lastData.washers} end={data.washers} onEnd={() => setLastData(['washers', data.washers])} /> : '???'}
-        </Box>
-        <Box position="absolute" left="33.3vw">
-          <Image h="1em" mr={4} d="inline-block" src="/wilsons.png" />
-          {data?.washers ? <CountUp start={lastData.wilsons} end={data.wilsons} onEnd={() => setLastData(['wilsons', data.wilsons])} /> : '???'}
-        </Box>
-        <Box position="absolute" left="66.6vw">
-          <Image h="1em" mr={4} d="inline-block" src="/floormarbles.png" />
-          {data?.washers ? <CountUp start={lastData.marbles} end={data.marbles} onEnd={() => setLastData(['marbles', data.marbles])} /> : '???'}
+    <Box
+      top={0}
+      right={0}
+      bottom={0}
+      left={0}
+      backgroundImage="/tape.png"
+      backgroundSize="cover"
+      backgroundRepeat="no-repeat"
+      backgroundPosition="50% 50%"
+      width="100%"
+      height="100%"
+    >
+      <Box position="absolute" bottom="5vh" left="1vw" right="1vw" pt="0.5vh" height="4vh" fontSize="5vh" {...rest}>
+        <Box position="relative">
+          <Box position="absolute" left="15vw" width="13vw" textAlign="center">
+            {data?.washers ? <CountUp start={lastData.washers} end={data.washers} onEnd={() => setLastData(['washers', data.washers])} /> : '???'}
+          </Box>
+          <Box position="absolute" marginTop="-0.5vh" left="45vw" width="10vw" textAlign="center">
+            {data?.washers ? <CountUp start={lastData.wilsons} end={data.wilsons} onEnd={() => setLastData(['wilsons', data.wilsons])} /> : '???'}
+          </Box>
+          <Box position="absolute" left="79vw" width="13vw" textAlign="center">
+            {data?.washers ? <CountUp start={lastData.marbles} end={data.marbles} onEnd={() => setLastData(['marbles', data.marbles])} /> : '???'}
+          </Box>
         </Box>
       </Box>
     </Box>

@@ -1,5 +1,6 @@
 import { Box } from '@chakra-ui/react';
 import Sidebar from '../components/Sidebar';
+import Logo from '../components/Logo';
 
 export default function SidebarPage() {
 
@@ -13,6 +14,7 @@ export default function SidebarPage() {
       width="100%"
       height="100%"
     >
+      <Logo />
       <Sidebar />
     </Box>
   )

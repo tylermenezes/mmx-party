@@ -1,4 +1,5 @@
 import { Box } from '@chakra-ui/react';
+import Logo from '../components/Logo';
 import Counters from '../components/Counters';
 import Sidebar from '../components/Sidebar';
 
@@ -18,6 +19,7 @@ export default function IndexPage() {
       width="100%"
       height="100%"
     >
+      <Logo />
       <Counters />
       <Sidebar />
     </Box>

@@ -11,8 +11,8 @@ export default function Logo({ ...rest }) {
   }, [typeof window, isAnimating]);
 
   return (
-    <Box textAlign="center" {...rest}>
-      <Image src={isAnimating ? `/logo.gif` : `/logo_static.gif`} height="10vh" d="inline-block" />
+    <Box position="absolute" top={0} left="3.2vw" height="11vh" textAlign="center" {...rest}>
+      <Image src={isAnimating ? `/logo.gif` : `/logo_static.gif`} height="100%" d="inline-block" />
     </Box>
   );
 }

@@ -28,8 +28,7 @@ export default function Sidebar({ ...rest }) {
   }, [typeof window, setDisplayed, displayed]);
 
   return (
-    <Box position="absolute" top="7vh" left="77vw" right="2vw" bottom="2vh" {...rest}>
-      <Logo mb="3vh" />
+    <Box position="absolute" top="15vh" left="77vw" right="2vw" bottom="2vh" {...rest}>
       <Box position="relative">
         <Box
           transition="opacity 1s ease-in-out"
