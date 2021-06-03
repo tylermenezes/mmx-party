@@ -8,7 +8,7 @@ export default function Counters({ ...rest }) {
   const { data } = useSwr(
     '/api/counters',
     (url) => fetch(url).then((res) => res.json()),
-    { revalidateOnFocus: false, refreshInterval: 5000 },
+    { revalidateOnFocus: false, refreshInterval: 15000 },
   );
 
   return useMemo(() => (
