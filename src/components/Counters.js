@@ -33,7 +33,7 @@ export default function Counters({ ...rest }) {
             {data?.washers ? <CountUp start={lastData.wilsons} end={data.wilsons} onEnd={() => setLastData(['wilsons', data.wilsons])} /> : data?.wilsons ?? '???'}
           </Box>
           <Box position="absolute" left="81vw" width="11vw" textAlign="center">
-            {data?.washers ? <CountUp start={lastData.marbles} end={data.marbles} onEnd={() => setLastData(['marbles', data.marbles])} /> : data?.washers ?? '???'}
+            {data?.marbles ? <CountUp start={lastData.marbles} end={data.marbles} onEnd={() => setLastData(['marbles', data.marbles])} /> : data?.marbles ?? '???'}
           </Box>
         </Box>
       </Box>
