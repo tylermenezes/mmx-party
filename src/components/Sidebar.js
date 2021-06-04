@@ -74,7 +74,7 @@ export default function Sidebar({ ...rest }) {
           transition="opacity 1s ease-in-out"
           opacity={displayed === 'promo' && !transitioning ? 1 : 0}
         >
-          <SidebarPromo />
+          <SidebarPromo displayed={displayed === 'promo'} />
         </Box>
       </Box>
     </Box>
