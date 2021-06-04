@@ -5,25 +5,25 @@ export default function SidebarPromo({ displayed }) {
     (
       <>
         <Text fontSize="3xl" lineHeight={2}>Join the party @</Text>
-        <Text fontSize="4xl">discord.gg/wintergatan</Text>
+        <Text fontSize="3xl">discord.gg/wintergatan</Text>
       </>
     ),
     (
       <>
-        <Text fontSize="2xl" lineHeight={2}>Help fill in the wiki while you watch!</Text>
-        <Text fontSize="4xl">tinyurl.com/MMXPartyWiki</Text>
+        <Text fontSize="lg" lineHeight={2} mt={8} color="white">Help fill in the wiki while you watch!</Text>
+        <Text fontSize="3xl" color="white">tinyurl.com/ MMXPartyWiki</Text>
       </>
     ),
     (
       <>
-        <Text fontSize="3xl" lineHeight={2}>See a marble on the floor?</Text>
-        <Text fontSize="4xl">tinyurl.com/MMXPartyWiki</Text>
+        <Text fontSize="2xl" lineHeight={2}>See a marble on the floor?</Text>
+        <Text fontSize="3xl">tinyurl.com/ MMXPartyWiki</Text>
       </>
     ),
     (
       <>
-        <Text fontSize="3xl" lineHeight={2}>For best quality watch @</Text>
-        <Text fontSize="4xl">twitch.tv/ wintergatan_community</Text>
+        <Text fontSize="2xl" lineHeight={2}>For best quality watch @</Text>
+        <Text fontSize="2xl">twitch.tv/ wintergatan_community</Text>
       </>
     )
   ]
@@ -44,6 +44,8 @@ export default function SidebarPromo({ displayed }) {
       color="white"
       fontSize="xl"
       textAlign="center"
+      fontFamily="sans-serif"
+      fontWeight="bold"
     >
       {promo}
       <Image mt={16} src="/machine.png" w="100%" />

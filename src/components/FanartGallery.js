@@ -64,9 +64,9 @@ export default function FanartGallery({ duration, ...rest }) {
                   fontSize="2vh"
                   color="white"
                   p={1}
-                  textTransform="uppercase"
+                  fontFamily="sans-serif"
                 >
-                  By {image?.credit}
+                  {image?.credit}
                 </Box>
               </Box>
             </Box>
