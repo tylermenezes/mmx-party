@@ -10,19 +10,25 @@ export default function SidebarPromo({ displayed }) {
     ),
     (
       <>
-        <Text fontSize="lg" lineHeight={2} mt={8} color="white">Help fill in the wiki while you watch!</Text>
-        <Text fontSize="3xl" color="white">tinyurl.com/ MMXPartyWiki</Text>
-      </>
-    ),
-    (
-      <>
-        <Text fontSize="2xl" lineHeight={2}>See a marble on the floor?</Text>
+        <Text fontSize="2xl" mb={4} lineHeight={1.3}>See a marble on the floor?</Text>
         <Text fontSize="3xl">tinyurl.com/ MMXPartyWiki</Text>
       </>
     ),
     (
       <>
-        <Text fontSize="2xl" lineHeight={2}>For best quality watch @</Text>
+        <Text fontSize="2xl" mb={4} lineHeight={1.3}>Wilson sighting?! Record it at</Text>
+        <Text fontSize="3xl">tinyurl.com/ MMXPartyWiki</Text>
+      </>
+    ),
+    (
+      <>
+        <Text fontSize="2xl" mb={4} lineHeight={1.3}>How many washers was that?</Text>
+        <Text fontSize="3xl">tinyurl.com/ MMXPartyWiki</Text>
+      </>
+    ),
+    (
+      <>
+        <Text fontSize="2xl" lineHeight={1.3} mb={4}>For best quality watch @</Text>
         <Text fontSize="2xl">twitch.tv/ wintergatan_community</Text>
       </>
     )

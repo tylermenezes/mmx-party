@@ -52,7 +52,7 @@ export default function Sidebar({ ...rest }) {
             </Box>
           </Box>
           <Box fontFamily="sans-serif" fontWeight="bold" textAlign="center">
-            <Text fontSize="lg" lineHeight={2} mt={8} color="white">Help fill in the wiki while you watch!</Text>
+            <Text fontSize="3xl" lineHeight={1.3} mt={8} mb={2} color="white">Help gather info for our wiki while you watch!</Text>
             <Text fontSize="4xl" color="white">tinyurl.com/ MMXPartyWiki</Text>
           </Box>
         </Box>
@@ -72,7 +72,7 @@ export default function Sidebar({ ...rest }) {
             <FanartGallery height="30vh" bg="white" duration={5000} />
           </Box>
           <Box fontFamily="sans-serif" fontWeight="bold" textAlign="center" pt={20}>
-            <Text fontSize="lg" lineHeight={2} mt={8} color="white">Help fill in the wiki while you watch!</Text>
+            <Text fontSize="3xl" lineHeight={1.3} mb={8} color="white">Help gather info for our wiki while you watch!</Text>
             <Text fontSize="4xl" color="white">tinyurl.com/ MMXPartyWiki</Text>
           </Box>
         </Box>
