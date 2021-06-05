@@ -55,6 +55,7 @@ export default function SidebarPromo({ displayed }) {
     >
       {promo}
       <Image mt={16} src="/machine.png" w="100%" />
+      <Text fontFamily="sans-serif" textAlign="center" fontSize="1.5vh">Render by Joseph Henry</Text>
     </Box>
   )
 }
