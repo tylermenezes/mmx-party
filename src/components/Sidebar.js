@@ -22,7 +22,7 @@ export default function Sidebar({ ...rest }) {
   useEffect(() => {
     if (typeof window === 'undefined' || !['promo', 'fanart'].includes(displayed)) return;
     const next = () => setDisplayed(displayed === 'promo' ? 'fanart' : 'promo');
-    const timeout = setTimeout(next, displayed === 'promo' ? 20000 : 30000);
+    const timeout = setTimeout(next, displayed === 'promo' ? 30000 : 60000);
     return () => clearTimeout(timeout);
   }, [typeof window, setDisplayed, displayed]);
 
@@ -69,7 +69,7 @@ export default function Sidebar({ ...rest }) {
             borderWidth={4}
             borderColor="rgba(255, 255, 255, 0.7)"
           >
-            <FanartGallery height="30vh" bg="white" duration={5000} />
+            <FanartGallery height="30vh" bg="white" duration={8000} />
           </Box>
           <Box fontFamily="sans-serif" fontWeight="bold" textAlign="center" pt={20}>
             <Text fontSize="3xl" lineHeight={1.3} mb={8} color="white">Help gather info for our wiki while you watch!</Text>
